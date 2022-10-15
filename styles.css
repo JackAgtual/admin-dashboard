@@ -13,6 +13,8 @@ body div {
 .sidebar {
     background-color: aqua;
     grid-row: 1 / span 2; /* not sure why -1 doesn't work for row end */
+    display: grid;
+    grid-auto-rows: min-content;
 }
 
 .header {
@@ -21,4 +23,17 @@ body div {
 
 .main-content {
     background-color: bisque;
+}
+
+.dashboard-title h1,
+.sidebar ul {
+    padding-left: 40px;
+}
+ 
+.dashboard-title {
+    border: none;
+}
+
+ul {
+    list-style-type: none;
 }
