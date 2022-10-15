@@ -1,3 +1,8 @@
+:root {
+    --sidebar-font-size: 24px;
+    --sidebar-hdr-font-size: 32px;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -15,6 +20,7 @@ body div {
     grid-row: 1 / span 2; /* not sure why -1 doesn't work for row end */
     display: grid;
     grid-auto-rows: min-content;
+    gap: 30px;
 }
 
 .header {
@@ -25,15 +31,47 @@ body div {
     background-color: bisque;
 }
 
-.dashboard-title h1,
-.sidebar ul {
-    padding-left: 40px;
-}
+li:not(:last-child) { 
+    margin-bottom: 20px;  
+ }
  
+ 
+.sidebar h1 {
+    font-size: var(--sidebar-hdr-font-size);
+    margin: 0;
+}
+
+.sidebar li {
+    font-size: var(--sidebar-font-size);
+}
+
+li svg {
+    height: var(--sidebar-font-size);
+    width: auto;
+}
+
 .dashboard-title {
     border: none;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-title, 
+.sidebar li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
 
 ul {
     list-style-type: none;
+}
+
+svg {
+    height: 36px;
+    width: auto;
+    margin-right: 10px;
+}
+path {
+    fill: rgb(0, 0, 0);
 }
