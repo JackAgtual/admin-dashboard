@@ -3,6 +3,7 @@
     --sidebar-hdr-font-size: 32px;
     --lg-img-size: 60px;
     --sm-img-size: 40px;
+    --other-cards-margin: 10px
 }
 
 /* overal styling */
@@ -12,7 +13,6 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) 5fr;
-    grid-template-rows: 200px 1fr;
 }
 
 h1, h2, p {
@@ -27,7 +27,6 @@ body div {
     background-color: aqua;
     grid-row: 1 / span 2; /* not sure why -1 doesn't work for row end */
     display: grid;
-    grid-auto-rows: min-content;
     gap: 30px;
 }
 
@@ -102,7 +101,6 @@ img {
 
 .search {
     grid-template-columns: min-content 1fr;
-    grid-template-rows: 1fr;
     gap: 0px;
 }
 
@@ -159,7 +157,6 @@ img {
 
 .projects {
     display: grid;
-    grid-template-rows: min-content 1fr;
 }
 
 .projects > h1 {
@@ -174,7 +171,6 @@ img {
 
 .card {
     display: grid;
-    grid-template-rows: repeat(2, min-content) 1fr;
     padding: 20px;
 }
 
@@ -186,4 +182,33 @@ img {
 .card-icons svg {
     height: 25px;
     width: auto;
+}
+
+/* Other cards styling */
+.other-cards {
+    display: grid;
+}
+
+.other-cards h1 {
+    font-size: 22px;
+    margin-left: var(--other-cards-margin);
+}
+
+.other-cards h2 {
+    font-size: 14px;
+}
+
+.other-cards p {
+    font-size: 12px;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+.announcement-card {
+    display: grid;
+    
+    margin: var(--other-cards-margin);
 }
