@@ -1,6 +1,8 @@
 :root {
     --sidebar-font-size: 24px;
     --sidebar-hdr-font-size: 32px;
+    --lg-img-size: 60px;
+    --sm-img-size: 40px;
 }
 
 /* overal styling */
@@ -10,7 +12,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) 5fr;
-    grid-template-rows: 500px 1fr;
+    grid-template-rows: 200px 1fr;
 }
 
 body div {
@@ -30,6 +32,7 @@ body div {
     background-color: rgba(255, 0, 0, 0.669);
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
+    padding: 0px 20px;
 }
 
 .main-content {
@@ -83,7 +86,51 @@ path {
 
 /* header styling */
 img {
-    width: 30px;
     height: auto;
     border-radius: 50%;
+}
+
+.header > div {
+    display: grid;
+    margin: 10px;
+    align-items: center;
+}
+
+.search {
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px;
+}
+
+.search > input {
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+    background-color: rgb(244, 244, 244);
+    height: 20px;
+}
+
+.profile-menu {
+    grid-template: 1fr / 50px 55px auto;
+    align-content: center;
+    justify-content: end;
+}
+
+.profile-menu img {
+    height: var(--sm-img-size);
+}
+
+.greeting > * {
+    margin: 0;
+}
+.user-handle {
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.user-handle img {
+    height: var(--lg-img-size);
+    width: auto;
+    grid-row: 1 / -1;
+    place-self: center;
 }
