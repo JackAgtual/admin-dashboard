@@ -4,7 +4,9 @@
     --lg-img-size: 60px;
     --sm-img-size: 40px;
     --hdr-icon-size: 30px;
+    --main-h-font-size: 20px;
     --other-cards-margin: 10px;
+    --main-top-margin: 10px;
     --blue: rgba(71,147,212,255);
     --yellow: rgba(240,180,40,255);
     --grey: rgba(226,232,240,255);
@@ -181,22 +183,30 @@ img {
     grid-template-columns: 3fr 1fr;
 }
 
-.projects {
-    display: grid;
+.main-content h1,
+.card h2 {
+    font-size: var(--main-h-font-size);
 }
 
-.projects > h1 {
-    margin: 10px 20px;
+.projects {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+.main-content h1 {
+    margin: var(--main-top-margin) 20px;
 }
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-self: stretch;
     margin: 0 20px;
     gap: 20px;
 }
 
 .card {
     display: grid;
+    grid-template-rows: repeat(2, min-content) 1fr;
     padding: 20px;
 }
 
@@ -216,7 +226,6 @@ img {
 }
 
 .other-cards h1 {
-    font-size: 22px;
     margin-left: var(--other-cards-margin);
 }
 
