@@ -15,6 +15,10 @@ body {
     grid-template-rows: 200px 1fr;
 }
 
+h1, h2, p {
+    margin: 0;
+}
+
 body div {
     border: 1px solid black;
 }
@@ -166,4 +170,20 @@ img {
     grid-template-columns: 1fr 1fr;
     margin: 0 20px;
     gap: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: repeat(2, min-content) 1fr;
+    padding: 20px;
+}
+
+.card-icons {
+    justify-self: end;
+    align-self: end;
+}
+
+.card-icons svg {
+    height: 25px;
+    width: auto;
 }
