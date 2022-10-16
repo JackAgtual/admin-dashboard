@@ -193,6 +193,11 @@ img {
     background-color: var(--grey);
 }
 
+.card,
+.announcement-card,
+.trending-posts {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
 .main-content h1,
 .card h2 {
     font-size: var(--main-h-font-size);
