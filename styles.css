@@ -19,6 +19,11 @@ h1, h2, p {
     margin: 0;
 }
 
+img {
+    height: var(--sm-img-size);
+    width: auto;
+}
+
 body div {
     border: 1px solid black;
 }
@@ -89,7 +94,7 @@ path {
 
 /* header styling */
 img {
-    height: auto;
+    width: auto;
     border-radius: 50%;
 }
 
@@ -202,13 +207,31 @@ img {
     font-size: 12px;
 }
 
-.announcements {
+/* Announcements and Trending */
+.announcements, 
+.trending {
     display: grid;
     grid-template-rows: min-content 1fr;
 }
 
-.announcement-card {
+.announcement-card,
+.trending-posts {
     display: grid;
-    
     margin: var(--other-cards-margin);
+}
+
+.trending-post {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: min-content 1fr;
+}
+
+.trending-post img {
+    grid-area: 1 / 1 / -1 / 2;
+    align-self: center;
+    margin: 0 10px;
+}
+
+.trending-post > p:first-of-type {
+    align-self: end;
 }
