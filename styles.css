@@ -3,7 +3,10 @@
     --sidebar-hdr-font-size: 32px;
     --lg-img-size: 60px;
     --sm-img-size: 40px;
-    --other-cards-margin: 10px
+    --other-cards-margin: 10px;
+    --blue: rgba(71,147,212,255);
+    --yellow: rgba(240,180,40,255);
+    --grey: rgba(226,232,240,255);
 }
 
 /* overal styling */
@@ -31,10 +34,19 @@ body div {
 }
 
 .sidebar {
-    background-color: aqua;
+    background-color: var(--blue);
     grid-row: 1 / span 2; /* not sure why -1 doesn't work for row end */
     display: grid;
     gap: 30px;
+}
+
+.sidebar path {
+    fill: white;
+}
+
+.sidebar h1,
+.sidebar li {
+    color: white;
 }
 
 /* header styling */
