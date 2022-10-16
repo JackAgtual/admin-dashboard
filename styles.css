@@ -146,3 +146,22 @@ img {
     border-radius: 20px;
     border: none;
 }
+
+/* Main content styling */
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+.projects > h1 {
+    margin: 10px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
