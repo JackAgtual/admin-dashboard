@@ -119,6 +119,10 @@ img {
     border-radius: 50%;
 }
 
+.header p {
+    color: black;
+}
+
 .header > div {
     display: grid;
     margin: 10px;
