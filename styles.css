@@ -3,6 +3,7 @@
     --sidebar-hdr-font-size: 32px;
     --lg-img-size: 60px;
     --sm-img-size: 40px;
+    --hdr-icon-size: 30px;
     --other-cards-margin: 10px;
     --blue: rgba(71,147,212,255);
     --yellow: rgba(240,180,40,255);
@@ -16,6 +17,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) 5fr;
+    grid-template-rows: 175px 1fr;
     font-family: 'Roboto', sans-serif;
 
 }
@@ -51,9 +53,9 @@ body div {
     color: white;
 }
 
-/* header styling */
+/* Sidebar styling */
 .header {
-    background-color: rgba(255, 0, 0, 0.669);
+    background-color: white;
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
     padding: 0px 20px;
@@ -156,6 +158,11 @@ img {
     width: auto;
     grid-row: 1 / -1;
     place-self: center;
+}
+
+.header svg {
+    height: var(--hdr-icon-size);
+    width: auto;
 }
 
 .actions {
