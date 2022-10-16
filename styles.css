@@ -175,6 +175,8 @@ img {
     padding: 10px 10px;
     border-radius: 20px;
     border: none;
+    background-color: var(--blue);
+    color: white;
 }
 
 /* Main content styling */
