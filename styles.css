@@ -13,6 +13,8 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) 5fr;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 h1, h2, p {
